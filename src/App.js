@@ -154,15 +154,15 @@ function Scene({ top, mouse }) {
   return (
       <>
         <a.spotLight intensity={1.2} color="white" position={mouse.interpolate((x, y) => [x / 100, -y / 100, 6.5])} />
-        <Effects factor={top.interpolate([0, 150], [1, 0])} />
+        {/*<Effects factor={top.interpolate([0, 150], [1, 0])} />*/}
         <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#27282F', '#247BA0', '#70C1B3', '#f8f3f1'])} />
         <Stars position={top.interpolate(top => [0, -1 + top / 20, 0])} />
         <Images top={top} mouse={mouse} scrollMax={scrollMax} />
-        <Text opacity={top.interpolate([0, 200], [1, 0])} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
-          lorem
+        <Text fontSize={50} opacity={top.interpolate([0, 200], [1, 0])} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
+          Very Good Coding Company
         </Text>
-        <Text position={top.interpolate(top => [0, -20 + ((top * 10) / scrollMax) * 2, 0])} color="black" fontSize={150}>
-          Ipsum
+        <Text position={top.interpolate(top => [0, -20 + ((top * 10) / scrollMax) * 2, 0])} color="black" fontSize={50}>
+          Very Good Coding Company
         </Text>
       </>
   )
